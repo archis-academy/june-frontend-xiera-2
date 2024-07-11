@@ -1,0 +1,127 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+.swiper {
+    width: auto;
+    height: auto;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  object-fit: cover;
+}
+
+
+.main-div{
+    width: 1440px;
+    height: 6295px;
+    margin: 5%;
+}
+
+.container{
+    max-width: 1049.37px;
+    height: 597px;
+}
+
+#testimonials{
+    font-family: Poppins;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-align: center;
+    color: #0D8772;
+}
+
+#subtitle{
+    font-family: Montserrat;
+    font-size: clamp(35px, 9vw, 50px);
+    font-weight: 700;
+    line-height: clamp(40px, 9vw, 60px);
+    letter-spacing: -1px;
+    text-align: center;
+    color: #292929;
+}
+
+.contents{
+    margin-top: 5%;
+    display: flex;
+    gap: 50%;
+}
+
+.image{
+    max-width: 412.37px;
+    height: 420px;
+    position: relative;
+}
+
+.users-image{
+    position: absolute;
+    top: 10px;
+    left: 50px;
+}
+
+.vector{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.name{
+    width: 122px;
+   height: 22px;
+   font-family: Inter;
+   font-size: 22px;
+   font-weight: 700;
+   line-height: 22px;
+   letter-spacing: -0.4000000059604645px;
+   text-align: left;
+   color: #292929;
+}
+
+.product-designer{
+    color: #83828A;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: -0.4000000059604645px;
+    text-align: left;
+    width: 111px;
+    height: 14px;
+}
+
+.text{
+    color:#5B5A62;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: -0.4000000059604645px;
+    text-align: left;
+    width: 476px;
+    height: 144px;
+}
+
+.evaluation-stars{
+ display: block;
+}
+
+.evaluation-designer{
+    margin-top: 50px;
+}
