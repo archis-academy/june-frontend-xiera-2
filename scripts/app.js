@@ -1,69 +1,87 @@
 const jobData = [
     {
         company: "Gucci",
-        logo: "gucci-logo.png",
+        logo: "../images/gucci-logo.png",
         time: "5 days ago",
         title: "Senior UX/UI Developer with strong Designer skills",
         location: "Oslo, Norway",
-        type: "Part-Time"
+        type: "Part-Time",
+        locationImg: "../images/Vector.png"
     },
     {
         company: "Adidas",
-        logo: "adidas.png",
+        logo: "../images/adidas.png",
         time: "5 days ago",
         title: "Junior analytic person with social skills",
         location: "Oslo, Norway",
-        type: "Part-Time"
+        type: "Part-Time",
+        locationImg: "../images/Vector.png"
     },
     {
         company: "Ford",
-        logo: "ford-logo.png",
+        logo: "../images/ford.png",
         time: "5 days ago",
         title: "Graphic designer with wordpress experience",
         location: "Oslo, Norway",
-        type: "Part-Time"
+        type: "Part-Time",
+        locationImg: "../images/Vector.png"
     },
     {
         company: "Microsoft",
-        logo: "microsoft-logo.png",
+        logo: "../images/microsoft.png",
         time: "5 days ago",
         title: "Frontend developer for growing marketplace",
         location: "Oslo, Norway",
-        type: "Part-Time"
+        type: "Part-Time",
+        locationImg: "../images/Vector.png"
     },
     {
         company: "Nike",
-        logo: "nike-logo.png",
+        logo: "../images/nike.png",
         time: "5 days ago",
         title: "Senior UX/UI Developer with strong Designer skills",
         location: "Oslo, Norway",
-        type: "Part-Time"
+        type: "Part-Time",
+        locationImg: "../images/Vector.png"
     },
     {
         company: "Gucci",
-        logo: "gucci-logo.png",
+        logo: "../images/gucci-logo.png",
         time: "5 days ago",
         title: "Frontend developer for gucci pro",
         location: "Oslo, Norway",
-        type: "Part-Time"
+        type: "Part-Time",
+        locationImg: "../images/Vector.png"
     }
 ];
 
-const jobCardsContainer = document.getElementById('job-cards');
+function createJobCards(jobData, containerId) {
+    const jobCardsContainer = document.getElementById(containerId);
 
-jobData.forEach(job => {
-    const jobCard = document.createElement('div');
-    jobCard.classList.add('job-card');
+    jobData.forEach(job => {
+        const jobCard = document.createElement('div');
+        jobCard.classList.add('job-card');
 
-    jobCard.innerHTML = `
-        <img src="${job.logo}" alt="${job.company}">
+        jobCard.innerHTML = `
+            <div class="job-card-header">
+                <img src="${job.logo}" alt="${job.company}">
+                <div>
+                    <h3>${job.company}</h3>
+                    <p class="date">${job.time}</p>
+                </div>
+            </div>
+            <h4>${job.title}</h4>
+            <div class="location-type">
+                <p class="location">
+            <img src="${job.locationImg}" alt="location icon">
+                ${job.location}
+            </p>
+            <p class="type">${job.type}</p>
+            </div>
+        `;
 
-        <h3>${job.company}</h3>
-        <p>${job.time}</p>
-        <h4>${job.title}</h4>
-        <p class="location">${job.location}</p>
-        <p class="type">${job.type}</p>
-    `;
+        jobCardsContainer.appendChild(jobCard);
+    });
+}
 
-    jobCardsContainer.appendChild(jobCard);
-});
+createJobCards(jobData, 'job-cards');
