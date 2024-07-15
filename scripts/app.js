@@ -1,12 +1,3 @@
-var swiper = new Swiper(".mySwiper", {
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-});
-
-
 document.getElementById("testimonials").innerHTML = `TESTIMONIALS`
 document.getElementById("subtitle").innerHTML = `What our customer say`
 
@@ -65,18 +56,35 @@ evaluationsContainer.innerHTML = evaluation.map(item => {
     return `
       <div class="swiper-slide">
         <div class="evaluation">
-          <div class="image-div">
-            <img class="vector" src="${item.vector}" alt="vector">
-            <img class="users-image" src="${item.userProfile}" alt="users">
+          <div class="img-container">
+            <div class="vector-div">
+              <img class="vector" src="${item.vector}" alt="vector">
+            </div>
+            <div class="image-div">
+              <img class="users-image" src="${item.userProfile}" alt="users">
+            </div>
           </div>
-          <div>
+          <div class="user-description">
             <h1 class="name">${item.name}</h1>
             <h3 class="department">${item.subtitle}</h3>
             <p class="text">${item.description}</p>
-            <img src="${item.star}" alt="stars" class="evaluation-stars">
-            <img src="${item.designer}" alt="designer" class="evaluation-designer">
+            <div class="evaluation-stars">
+              <img src="${item.star}" alt="stars">
+            </div>
+            <div class="evaluation-designer">
+              <img src="${item.designer}" alt="designer">
+            </div>          
           </div>
         </div>
       </div>
     `;
   }).join('');
+
+
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+});
