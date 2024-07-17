@@ -1,0 +1,112 @@
+.jobs-container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header-div{
+    max-width: 540px;
+    margin: auto;
+}
+
+.jobs-category{
+    font-family: "Poppins" , sans-serif;
+    color: #F57343;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.17rem;
+    font-weight: 600;
+}
+
+.jobs-subtitle{
+    color: #292929;
+    font-family: "Montserrat" , sans-serif;
+    font-size: 50px;
+    text-align: center;
+    line-height: 60px;
+    letter-spacing: -1px;
+}
+
+.text-div{
+    margin: auto;
+    max-width: 470px;
+}
+
+.jobs-text{
+    color: #5B5A62;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.category-div{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#categories{
+    max-width: 250px;
+    min-height: 230px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+    gap: 60px;
+
+}
+
+.job-item{
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-div{
+    max-width: 75px;
+    position: relative;
+}
+
+.background{
+    width: 100%;
+    object-fit: cover;
+}
+
+.symbol-div{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-90%);
+}
+
+.symbol{
+    width: 100%;
+}
+
+.jobsName{
+    font-family: "Inter" , sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: -0.52px;
+    text-align: center;
+}
+
+.jobsDescription{
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.4px;
+    text-align: center;
+    color:#919098
+}
+
+.underline{
+    max-width: 160px;
+    margin: auto;
+}
