@@ -6,7 +6,7 @@ const jobData = [
         title: "Senior UX/UI Developer with strong Designer skills",
         location: "Oslo, Norway",
         type: "Part-Time",
-        locationImg: "../images/Vector.png"
+        locationVector: "../images/Vector.png"
     },
     {
         company: "Adidas",
@@ -15,7 +15,7 @@ const jobData = [
         title: "Junior analytic person with social skills",
         location: "Oslo, Norway",
         type: "Part-Time",
-        locationImg: "../images/Vector.png"
+        locationVector: "../images/Vector.png"
     },
     {
         company: "Ford",
@@ -24,7 +24,7 @@ const jobData = [
         title: "Graphic designer with wordpress experience",
         location: "Oslo, Norway",
         type: "Part-Time",
-        locationImg: "../images/Vector.png"
+        locationVector: "../images/Vector.png"
     },
     {
         company: "Microsoft",
@@ -33,7 +33,7 @@ const jobData = [
         title: "Frontend developer for growing marketplace",
         location: "Oslo, Norway",
         type: "Part-Time",
-        locationImg: "../images/Vector.png"
+        locationVector: "../images/Vector.png"
     },
     {
         company: "Nike",
@@ -42,7 +42,7 @@ const jobData = [
         title: "Senior UX/UI Developer with strong Designer skills",
         location: "Oslo, Norway",
         type: "Part-Time",
-        locationImg: "../images/Vector.png"
+        locationVector: "../images/Vector.png"
     },
     {
         company: "Gucci",
@@ -51,7 +51,7 @@ const jobData = [
         title: "Frontend developer for gucci pro",
         location: "Oslo, Norway",
         type: "Part-Time",
-        locationImg: "../images/Vector.png"
+        locationVector: "../images/Vector.png"
     },
     {
         company: "Gucci",
@@ -60,7 +60,17 @@ const jobData = [
         title: "Senior UX/UI Developer with strong Designer skills",
         location: "Oslo, Norway",
         type: "Part-Time",
-        locationImg: "../images/Vector.png"
+        locationVector: "../images/Vector.png"
+    },
+
+    {
+        company: "Gucci",
+        logo: "../images/gucci-logo.png",
+        time: "5 days ago",
+        title: "Senior UX/UI Developer with strong Designer skills",
+        location: "Oslo, Norway",
+        type: "Part-Time",
+        locationVector: "../images/Vector.png"
     },
     {
         company: "Adidas",
@@ -69,16 +79,7 @@ const jobData = [
         title: "Junior analytic person with social skills",
         location: "Oslo, Norway",
         type: "Part-Time",
-        locationImg: "../images/Vector.png"
-    },
-    {
-        company: "Ford",
-        logo: "../images/ford.png",
-        time: "5 days ago",
-        title: "Graphic designer with wordpress experience",
-        location: "Oslo, Norway",
-        type: "Part-Time",
-        locationImg: "../images/Vector.png"
+        locationVector: "../images/Vector.png"
     },
     {
         company: "Microsoft",
@@ -87,8 +88,19 @@ const jobData = [
         title: "Frontend developer for growing marketplace",
         location: "Oslo, Norway",
         type: "Part-Time",
-        locationImg: "../images/Vector.png"
+        locationVector: "../images/Vector.png"
     },
+    {
+        company: "Ford",
+        logo: "../images/ford.png",
+        time: "5 days ago",
+        title: "Graphic designer with wordpress experience",
+        location: "Oslo, Norway",
+        type: "Part-Time",
+        locationVector: "../images/Vector.png"
+    },
+
+
     {
         company: "Nike",
         logo: "../images/nike.png",
@@ -96,22 +108,13 @@ const jobData = [
         title: "Senior UX/UI Developer with strong Designer skills",
         location: "Oslo, Norway",
         type: "Part-Time",
-        locationImg: "../images/Vector.png"
+        locationVector: "../images/Vector.png"
     },
-    {
-        company: "Gucci",
-        logo: "../images/gucci-logo.png",
-        time: "5 days ago",
-        title: "Frontend developer for gucci pro",
-        location: "Oslo, Norway",
-        type: "Part-Time",
-        locationImg: "../images/Vector.png"
-    }
 ];
 
 function createJobCard(job) {
     return `
-        <div class="swiper-slide job-card">
+        <div class="job-card">
             <div class="job-card-header">
                 <img src="${job.logo}" alt="${job.company}">
                 <div>
@@ -122,7 +125,7 @@ function createJobCard(job) {
             <h4>${job.title}</h4>
             <div class="location-type">
                 <p class="location">
-                    <img src="${job.locationImg}" alt="location icon">
+                    <img src="${job.locationVector}" alt="location icon">
                     ${job.location}
                 </p>
                 <p class="type">${job.type}</p>
@@ -131,38 +134,36 @@ function createJobCard(job) {
     `;
 }
 
-function renderJobCards(jobData, containerClass) {
-    const swiperWrapper = document.querySelector(containerClass);
-    jobData.forEach(job => {
-        swiperWrapper.innerHTML += createJobCard(job);
-    });
+function renderJobCards(jobData, startIndex = 0) {
+    const jobCardsContainer = document.getElementById('job-cards');
+    jobCardsContainer.innerHTML = '';
+    for (let i = startIndex; i < startIndex + 6 && i < jobData.length; i++) {
+        jobCardsContainer.innerHTML += createJobCard(jobData[i]);
+    }
 }
 
-renderJobCards(jobData, '.swiper-wrapper');
+let currentIndex = 0;
 
-const swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    navigation: {
-        nextEl: '#next-button',
-        prevEl: '#prev-button',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 1,
-            spaceBetween: 20
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 30
-        },
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 40
-        }
+document.getElementById('next-button').addEventListener('click', () => {
+    if (currentIndex + 6 < jobData.length) {
+        currentIndex += 6;
+        renderJobCards(jobData, currentIndex);
+        updateButtons();
     }
 });
+
+document.getElementById('prev-button').addEventListener('click', () => {
+    if (currentIndex - 6 >= 0) {
+        currentIndex -= 6;
+        renderJobCards(jobData, currentIndex);
+        updateButtons();
+    }
+});
+
+function updateButtons() {
+    document.getElementById('prev-button').disabled = currentIndex === 0;
+    document.getElementById('next-button').disabled = currentIndex + 6 >= jobData.length;
+}
+
+renderJobCards(jobData);
+updateButtons();
