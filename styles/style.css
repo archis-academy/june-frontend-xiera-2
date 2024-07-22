@@ -11,7 +11,7 @@
 .jobs-category{
     font-family: "Poppins" , sans-serif;
     color: #F57343;
-    font-size: 16px;
+    font-size: clamp(10px, 5vw, 16px);
     text-align: center;
     letter-spacing: 0.17rem;
     font-weight: 600;
@@ -20,9 +20,9 @@
 .jobs-subtitle{
     color: #292929;
     font-family: "Montserrat" , sans-serif;
-    font-size: 50px;
+    font-size: clamp(30px, 9vw, 50px);
     text-align: center;
-    line-height: 60px;
+    line-height: clamp(40px, 9vw, 60px);
     letter-spacing: -1px;
 }
 
@@ -35,8 +35,8 @@
     color: #5B5A62;
     text-align: center;
     font-family: "Inter", sans-serif;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: clamp(10px, 9vw, 18px);
+    line-height: clamp(20px, 9vw, 28px);
 }
 
 .jobs-category-div{
@@ -87,8 +87,8 @@
 .jobs-name{
     font-family: "Inter" , sans-serif;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 34px;
+    font-size: clamp(15px, 5vw, 24px);
+    line-height: clamp(20px, 5vw, 34px);
     letter-spacing: -0.52px;
     text-align: center;
 }
@@ -96,8 +96,8 @@
 .jobs-description{
     font-family: "Inter", sans-serif;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: clamp(10px, 5vw, 18px);
+    line-height: clamp(10px, 5vw, 22px);
     letter-spacing: -0.4px;
     text-align: center;
     color:#919098
@@ -105,5 +105,21 @@
 
 .jobs-underline{
     max-width: 160px;
-    margin: auto;
+    margin: 5% auto auto auto;
+}
+
+@media (max-width: 780px) and (min-width: 380px) {
+    #jobs-categories {
+        gap: 10px;
+    }
+
+    .jobs-item {
+        flex: 0 0 calc(50% - 10px); /*Öğelerin genişliği ayarlanır*/
+    }
+}
+
+@media (max-width: 300px) {
+    .jobs-item {
+        flex: 0 0 100%;
+    }
 }
