@@ -25,19 +25,19 @@ const jobs = [
     }
 ]
 
-const jobsContainer = document.getElementById("categories");
+const jobsContainer = document.getElementById("jobs-categories");
 
 jobsContainer.innerHTML = jobs.map(item => {
     return`
-    <div class="job-item">
-      <div class="image-div">
-        <img class="background" src="${item.background}" alt="background">
-        <div class="symbol-div">
-           <img class="symbol" src="${item.symbol}" alt="symbol">
+    <div class="jobs-item">
+      <div class="jobs-image-div">
+        <img class="jobs-background" src="${item.background}" alt="background">
+        <div class="jobs-symbol-div">
+           <img class="jobs-symbol" src="${item.symbol}" alt="symbol">
         </div>
       </div>  
-      <h1 class="jobsName">${item.jobsName}</h1>
-      <p class="jobsDescription">${item.description}</p>
+      <h1 class="jobs-name">${item.jobsName}</h1>
+      <p class="jobs-description">${item.description}</p>
     </div>
     `   ;
 }).join('');

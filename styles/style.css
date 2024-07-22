@@ -3,7 +3,7 @@
     margin: auto;
 }
 
-.header-div{
+.jobs-header-div{
     max-width: 540px;
     margin: auto;
 }
@@ -26,7 +26,7 @@
     letter-spacing: -1px;
 }
 
-.text-div{
+.jobs-text-div{
     margin: auto;
     max-width: 470px;
 }
@@ -39,43 +39,40 @@
     line-height: 28px;
 }
 
-.category-div{
-    max-width: 1200px;
+.jobs-category-div{
     margin: auto;
     display: flex;
     justify-content: center;
 }
 
-#categories{
-    max-width: 250px;
-    min-height: 230px;
-    margin: auto;
+#jobs-categories{
+    max-width: 1200px;
     display: flex;
-    flex-direction: row;
     justify-content: center;   
     gap: 60px;
-
+    flex-wrap: wrap;
+    flex: 1;
 }
 
-.job-item{
-    min-width: 250px;
+.jobs-item{
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.image-div{
+.jobs-image-div{
     max-width: 75px;
     position: relative;
 }
 
-.background{
+.jobs-background{
     width: 100%;
     object-fit: cover;
 }
 
-.symbol-div{
+.jobs-symbol-div{
     position: absolute;
     display: flex;
     justify-content: center;
@@ -83,11 +80,11 @@
     transform: translateY(-90%);
 }
 
-.symbol{
+.jobs-symbol{
     width: 100%;
 }
 
-.jobsName{
+.jobs-name{
     font-family: "Inter" , sans-serif;
     font-weight: 600;
     font-size: 24px;
@@ -96,7 +93,7 @@
     text-align: center;
 }
 
-.jobsDescription{
+.jobs-description{
     font-family: "Inter", sans-serif;
     font-weight: 500;
     font-size: 18px;
@@ -106,7 +103,7 @@
     color:#919098
 }
 
-.underline{
+.jobs-underline{
     max-width: 160px;
     margin: auto;
 }
