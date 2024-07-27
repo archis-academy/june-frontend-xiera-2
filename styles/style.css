@@ -432,3 +432,170 @@ body {
     }
 }
 /* Testimonial Section */
+
+
+/* NewsLetter Component */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.newslatter-main-div{
+    margin: auto;
+    max-width: 1200px;
+}
+
+.newslatter-container-div{
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+.newslatter-background-div{    
+    background: url("/images/newsLatterBackground.png");  
+    background-position: center;
+    background-size: cover;
+    min-height: 380px;
+    max-width: 1200px; 
+    position: relative;
+    z-index: -1;
+    border-radius: 25px;
+    margin: auto;
+}
+
+.newslatter-object-div{
+    margin: 80px auto;
+    max-width: 1200px;
+    display: relative;
+    position: absolute;
+}
+
+.nl-objects{
+    width: 100%;
+}
+
+.newslatter-header-div{
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px;
+}
+
+.newslatter-title{
+    color: #BC95F2;
+    font-family: "Poppins" , sans-serif;
+    font-size: clamp(10px, 3vw, 16px);
+    font-weight: 600;
+    line-height: clamp(20px, 3vw, 24px);
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+.newslatter-subtitle{
+    color: #FFFFFF;
+    font-family: "Montserrat" , sans-serif;
+    font-size: clamp(25px, 7vw, 50px);
+    font-weight: 700;
+    line-height: clamp(30px, 7vw, 60px);
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.newslatter-email-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+#newslatter-emailForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#newslatter-emailForm input[type="email"] {
+    width: 500px;
+    padding: 25px;
+    border: none;
+    border-radius: 38px;
+    font-family: "Poppins" , sans-serif;
+    font-size: clamp(10px, 5vw, 14px);
+    font-weight: 500;
+    line-height: clamp(15px, 5vw, 21px);
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #A3A2A8;
+    outline: none;    
+
+}
+
+#newslatter-emailForm button {
+    font-family: "Inter" , sans-serif;
+    font-size: clamp(10px, 5vw, 16px);
+    font-weight: 600;
+    line-height: clamp(15px, 5vw, 20px);
+    text-align: center;
+    color: #FFFFFF;
+    background: #FFB200;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    padding: 20px 30px;
+    max-width: 140px;
+    position: absolute;
+    right: 0;
+}
+
+#newslatter-emailForm button:hover {
+    background-color: #e69500;
+}
+
+@media (max-width: 520px) {
+    #newslatter-emailForm input[type="email"]{
+        width: 300px;
+        padding: 15px;
+        font-size: 10px;    
+    }
+
+    #newslatter-emailForm button {
+        border-radius: 20px;
+        max-width: 100px;
+        font-size: 10px;
+        padding: 10px 20px;
+    }   
+    
+    .newslatter-background-div{    
+        min-height: 300px;     
+    }
+}
+
+@media (max-width: 320px){
+    #newslatter-emailForm {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #newslatter-emailForm input[type="email"] {
+        width: 200px;
+        padding: 15px;
+        font-size: 10px;    
+    }
+
+    #newslatter-emailForm button {
+        border-radius: 20px;
+        max-width: 100px;
+        font-size: 10px;
+        padding: 10px 20px;
+        position: relative;
+    }
+}
+/* NewsLetter Component */
