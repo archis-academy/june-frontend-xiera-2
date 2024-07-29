@@ -97,11 +97,11 @@
                   <h1 class="newslatter-subtitle">Subscribe Newsletter</h1>
               </div>
               <div class="newslatter-email-div">
-                  <form id="newslatter-emailForm">
-                      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                      <button type="submit">Subscribe</button>
-                  </form>
-              </div>
+                <form id="newslatter-emailForm" onsubmit="submitForm(event)">
+                    <input class="nl-email-input" type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    <button class="nl-subscribe-button" type="submit">Subscribe</button>
+                </form>
+            </div>
           </div>
       </div>
   </div>

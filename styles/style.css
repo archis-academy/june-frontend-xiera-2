@@ -522,7 +522,7 @@ body {
     position: relative;
 }
 
-#newslatter-emailForm input[type="email"] {
+.nl-email-input {
     width: 500px;
     padding: 25px;
     border: none;
@@ -535,10 +535,9 @@ body {
     text-align: left;
     color: #A3A2A8;
     outline: none;    
-
 }
 
-#newslatter-emailForm button {
+.nl-subscribe-button {
     font-family: "Inter" , sans-serif;
     font-size: clamp(10px, 5vw, 16px);
     font-weight: 600;
@@ -555,26 +554,28 @@ body {
     right: 0;
 }
 
-#newslatter-emailForm button:hover {
+.nl-subscribe-button:hover {
     background-color: #e69500;
 }
 
+
 @media (max-width: 520px) {
-    #newslatter-emailForm input[type="email"]{
+    .nl-email-input{
         width: 300px;
         padding: 15px;
         font-size: 10px;    
     }
 
-    #newslatter-emailForm button {
+    .nl-subscribe-button {
         border-radius: 20px;
         max-width: 100px;
         font-size: 10px;
         padding: 10px 20px;
-    }   
+    }
     
     .newslatter-background-div{    
-        min-height: 300px;     
+        min-height: 300px;
+     
     }
 }
 
@@ -584,13 +585,13 @@ body {
         gap: 10px;
     }
 
-    #newslatter-emailForm input[type="email"] {
+    .nl-email-input {
         width: 200px;
         padding: 15px;
         font-size: 10px;    
     }
 
-    #newslatter-emailForm button {
+    .nl-subscribe-button {
         border-radius: 20px;
         max-width: 100px;
         font-size: 10px;
