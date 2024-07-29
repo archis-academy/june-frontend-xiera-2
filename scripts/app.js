@@ -175,25 +175,25 @@ updateButtons();
 const jobs = [
     {
         background: "images/designBg.png",
-        symbol:"images/designImg.png",
+        symbol: "images/designImg.png",
         jobsName: "Design",
         description: "310 Vacancy"
     },
     {
         background: "images/businessBg.png",
-        symbol:"images/businessImg.png",
+        symbol: "images/businessImg.png",
         jobsName: "Business",
         description: "310 Vacancy"
     },
     {
         background: "images/developmentBg.png",
-        symbol:"images/developmentImg.png",
+        symbol: "images/developmentImg.png",
         jobsName: "Development",
         description: "310 Vacancy"
     },
     {
         background: "images/communicationBg.png",
-        symbol:"images/communicationImg.png",
+        symbol: "images/communicationImg.png",
         jobsName: "Communication",
         description: "310 Vacancy"
     }
@@ -202,7 +202,7 @@ const jobs = [
 const jobsContainer = document.getElementById("jobs-categories");
 
 jobsContainer.innerHTML = jobs.map(item => {
-    return`
+    return `
     <div class="jobs-item">
       <div class="jobs-image-div">
         <img class="jobs-background" src="${item.background}" alt="background">
@@ -225,44 +225,44 @@ document.getElementById("testimonial-subtitle").innerHTML = `What our customer s
 
 const testimonialsEvaluation = [
     {
-      testimonialsUserProfile :"image/justinAlins.png",
-      testimonialsName: "Justin Alins",
-      testimonialsSubtitle: "Product Designer",
-      testimonialsDescription: " “Really Jobfind is the best platform to get any kind of job, aspecially their support was awesome, They have tried to level best to give best support of new candidate.” ",
-      testimonialsStar: "image/stars.png",
-      testimonialsDesigner: "image/designer.png"
+        testimonialsUserProfile: "image/justinAlins.png",
+        testimonialsName: "Justin Alins",
+        testimonialsSubtitle: "Product Designer",
+        testimonialsDescription: " “Really Jobfind is the best platform to get any kind of job, aspecially their support was awesome, They have tried to level best to give best support of new candidate.” ",
+        testimonialsStar: "image/stars.png",
+        testimonialsDesigner: "image/designer.png"
     },
     {
-      testimonialsUserProfile :"image/emilyCarter.png",
-      testimonialsName: "Emily Carter",
-      testimonialsSubtitle: "UX/UI Designer",
-      testimonialsDescription: "“Jobfind made my job search incredibly easy. The platform is user-friendly and their support team is always there to help.”",
-      testimonialsStar: "image/stars.png",
-      testimonialsDesigner: "image/designer.png"
+        testimonialsUserProfile: "image/emilyCarter.png",
+        testimonialsName: "Emily Carter",
+        testimonialsSubtitle: "UX/UI Designer",
+        testimonialsDescription: "“Jobfind made my job search incredibly easy. The platform is user-friendly and their support team is always there to help.”",
+        testimonialsStar: "image/stars.png",
+        testimonialsDesigner: "image/designer.png"
     },
     {
-      testimonialsUserProfile :"image/michaelBrown.png",
-      testimonialsName: "Michael Brown",
-      testimonialsSubtitle: "Front-end Developer",
-      testimonialsDescription: "“I found my dream job thanks to Jobfind. Their vast network of employers and their professional support team are top-notch.”",
-      testimonialsStar: "image/stars.png",
-      testimonialsDesigner: "image/designer.png"
+        testimonialsUserProfile: "image/michaelBrown.png",
+        testimonialsName: "Michael Brown",
+        testimonialsSubtitle: "Front-end Developer",
+        testimonialsDescription: "“I found my dream job thanks to Jobfind. Their vast network of employers and their professional support team are top-notch.”",
+        testimonialsStar: "image/stars.png",
+        testimonialsDesigner: "image/designer.png"
     },
     {
-      testimonialsUserProfile :"image/sophieTurner.png",
-      testimonialsName: "Sophie Turner",
-      testimonialsSubtitle: "Graphic Designer",
-      testimonialsDescription: "“Jobfind is a game changer. The platform is intuitive, and the support I received was exceptional. Highly recommended!”",
-      testimonialsStar: "image/stars.png",
-      testimonialsDesigner: "image/designer.png"
+        testimonialsUserProfile: "image/sophieTurner.png",
+        testimonialsName: "Sophie Turner",
+        testimonialsSubtitle: "Graphic Designer",
+        testimonialsDescription: "“Jobfind is a game changer. The platform is intuitive, and the support I received was exceptional. Highly recommended!”",
+        testimonialsStar: "image/stars.png",
+        testimonialsDesigner: "image/designer.png"
     },
     {
-      testimonialsUserProfile :"image/davidSmith.png",
-      testimonialsName: "David Smith",
-      testimonialsSubtitle: "Web Developer",
-      testimonialsDescription: "“I had a fantastic experience with Jobfind. Their team was incredibly helpful and guided me through every step of the job search process.”",
-      testimonialsStar: "image/stars.png",
-      testimonialsDesigner: "image/designer.png"
+        testimonialsUserProfile: "image/davidSmith.png",
+        testimonialsName: "David Smith",
+        testimonialsSubtitle: "Web Developer",
+        testimonialsDescription: "“I had a fantastic experience with Jobfind. Their team was incredibly helpful and guided me through every step of the job search process.”",
+        testimonialsStar: "image/stars.png",
+        testimonialsDesigner: "image/designer.png"
     }
 ]
 
@@ -291,14 +291,38 @@ testimonialsEvaluationContainer.innerHTML = testimonialsEvaluation.map(item => {
         </div>
       </div>
     `;
-  }).join('');
+}).join('');
 
 
-  var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
 });
 /* Testimonial Section */
+
+/*Hero Section*/
+document.getElementById('searchButton').addEventListener('click', function () {
+    const jobTitle = document.getElementById('jobTitle').value;
+    const location = document.getElementById('location').value;
+    const jobType = document.getElementById('jobType').value;
+
+
+    const jobs = [
+        { title: 'Software Engineer', location: 'New York', type: 'remotely' },
+        { title: 'UI/UX Designer', location: 'San Francisco', type: 'onsite' },
+        { title: 'Product Manager', location: 'Remote', type: 'remotely' }
+
+
+    ];
+
+    const filteredJobs = jobs.filter(job =>
+        job.title.toLowerCase().includes(jobTitle.toLowerCase()) &&
+        job.location.toLowerCase().includes(location.toLowerCase()) &&
+        job.type === jobType
+    );
+
+    console.log('Filtered Jobs:', filteredJobs);
+});
