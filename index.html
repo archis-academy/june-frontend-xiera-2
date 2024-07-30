@@ -21,9 +21,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
 </head>
 <body>
+  <!-- Hero Section -->
+  <header class="header">
+    <div class="header-left">
+        <img src="images1/Logo.png" alt="Xiera Logo">
+    </div>
+    <div class="header-center">
+        <a href="#">Find Jobs <span class="dropdown-arrow">&#9662;</span></a>
+        <a href="#">Recent post <span class="dropdown-arrow">&#9662;</span></a>
+        <a href="#">Company</a>
+    </div>
+    <div class="header-right">
+        <button class="login-button">Log in</button>
+        <button class="create-account-button">Create Account</button>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <h1>The home of your dream j <img class="doodle-4" src="images1/doodle-4 1.png" alt="doodle-4">b</h1>
+        <p class="centered-text">You do not have the right to remain silent... let us know what it takes to challenge you</p>
+        <div class="search-bar">
+            <input type="text" id="jobTitle" placeholder="Job Title or keyword">
+            <input type="text" id="location" placeholder="Location">
+            <select id="jobType">
+                <option value="remotely">Remotely</option>
+                <option value="onsite">Onsite</option>
+                <option value="hybrid">Hybrid</option>
+                
+
+
+            </select>
+            <button id="searchButton" class="search-button">Search job</button>
+        </div>
+        <div class="trending-searches">
+            <span>Trending searches:</span>
+            <a href="#">Remote job</a>
+            <a href="#">UI/UX Design</a>
+            <a href="#">Product Design</a>
+            <a href="#">Development</a>
+            <a href="#">Work From Home</a>
+        </div>
+    </section>
+    <!-- Modal Structure -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Search Results</h2>
+    <div id="results"></div>
+  </div>
+</div>
+
+</main>
+
+
 
     <!-- Featured Jobs Section -->
     <div class="container">
@@ -98,45 +154,7 @@
     <!-- Testimonial Section -->
 
 
-    <!-- Hero Section -->
-    <header class="header">
-      <div class="header-left">
-          <img src="images1/Logo.png" alt="Xiera Logo">
-      </div>
-      <div class="header-right">
-          <a href="#">Find Jobs</a>
-          <a href="#">Recent post</a>
-          <a href="#">Company</a>
-          <button class="login-button">Log in</button>
-          <button class="create-account-button">Create Account</button>
-      </div>
-  </header>
-
-  <main>
-      <section class="hero">
-          <h1>The home of your dream j <img class="doodle-4" src="images1/doodle-4 1.png" alt="doodle-4">b</h1>
-          <p class="centered-text">You do not have the right to remain silent... let us know what it takes to challenge you</p>
-          <div class="search-bar">
-              <input type="text" id="jobTitle" placeholder="Job Title or keyword">
-              <input type="text" id="location" placeholder="Location">
-              <select id="jobType">
-                  <option value="remotely">Remotely</option>
-                  <option value="onsite">Onsite</option>
-              </select>
-              <button id="searchButton" class="search-button">Search job</button>
-          </div>
-          <div class="trending-searches">
-              <span>Trending searches:</span>
-              <a href="#">Remote job</a>
-              <a href="#">UI/UX Design</a>
-              <a href="#">Product Design</a>
-              <a href="#">Development</a>
-              <a href="#">Work From Home</a>
-          </div>
-      </section>
-  </main>
-
-
+    
     <!-- ! script tag her zaman en alt satırda yer alsın-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="scripts/app.js"></script>

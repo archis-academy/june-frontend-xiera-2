@@ -1,3 +1,164 @@
+/* Hero Section*/
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+}
+
+.header-left img {
+    height: 40px;
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header-center a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+}
+
+.dropdown-arrow {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+}
+
+.login-button, .create-account-button {
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.login-button {
+    background-color: #333;
+}
+
+.create-account-button {
+    background-color: #6c63ff;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    
+    margin: 0 auto 30px auto;
+    width: 500px;
+}
+
+.hero p.centered-text {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 30px auto; 
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar input, .search-bar select, .search-bar button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    background-color: #ff7043;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+.trending-searches {
+    gap: 10px;
+}
+
+.trending-searches span {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+.trending-searches a {
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.doodle-4 {
+    width: 24px; 
+    height: 24px; 
+    vertical-align: middle; 
+}
+/* Modal styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+
 /* Featured Jobs Section */
 body {
     font-family: 'Arial', sans-serif;
@@ -433,111 +594,3 @@ body {
 }
 /* Testimonial Section */
 
-/* Hero Section*/
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 50px;
-    
-   
-   
-}
-
-.header-left img {
-    height: 40px;
-}
-
-.header-right a, .login-button, .create-account-button {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-
-.login-button, .create-account-button {
-    
-    color: #fff;
-    border: none;
-    border-radius: 15px;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-.create-account-button {
-    background-color: #6c63ff;
-}
-
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.hero p.centered-text {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 30px;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto 30px auto; 
-}
-
-.search-bar {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.search-bar input, .search-bar select, .search-bar button {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.search-bar button {
-    background-color: #ff7043;
-    color: #fff;
-    cursor: pointer;
-    border: none;
-}
-
-.trending-searches {
-    
-    gap: 10px;
-    
-}
-
-.trending-searches span {
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px 30px;
-}
-
-.trending-searches a {
-    padding: 10px 20px;
-    text-decoration: none;
-}
-
-
-.doodle-4 {
-    width: 24px; 
-    height: 24px; 
-    vertical-align: middle; 
-}
