@@ -559,7 +559,6 @@ body {
 
 @media (max-width: 520px) {
     .nl-email-input{
-        width: 300px;
         padding: 15px;
         font-size: 10px;    
     }
@@ -574,6 +573,10 @@ body {
     
     .newslatter-background-div{    
         min-height: 300px;     
+    }
+    
+    #newslatter-emailForm {
+        max-width: 280px;
     }
 }
 
@@ -594,6 +597,10 @@ body {
         font-size: 10px;
         padding: 10px 20px;
         position: relative;
+    }
+
+    #newslatter-emailForm {
+        max-width: 210px;
     }
 }
 /* NewsLetter-Component */
