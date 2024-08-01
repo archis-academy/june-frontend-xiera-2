@@ -9,18 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -96,12 +85,28 @@
     </div>
     <!-- Testimonial Section -->
 
-    <!-- ! script tag her zaman en alt satırda yer alsın-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="scripts/app.js"></script>
-
-
     
+    <!-- NewsLetter-Component -->
+    <div class="newslatter-main-div">
+      <div class="newslatter-background-div">
+          <div class="newslatter-object-div">
+            <img class="nl-objects" src="images/newsLatterObject.png" alt="objects">
+          </div>
+          <div class="newslatter-header-div">
+            <h3 class="newslatter-title">NEWS LETTER</h3>
+            <h1 class="newslatter-subtitle">Subscribe Newsletter</h1>
+          </div>
+          <div class="newslatter-email-div">
+            <form id="newslatter-emailForm" onsubmit="submitForm(event)">
+              <input class="nl-email-input" type="email" id="email" name="email" placeholder="Enter your email address" required>
+              <button class="nl-subscribe-button" type="submit">Subscribe</button>
+            </form>
+          </div>
+      </div>
+  </div>
+    <!-- NewsLetter-Component -->
+
+        
      <!-- Footer Section -->
     <footer>
         <div class="footer-wrapper">
@@ -147,5 +152,12 @@
             <p>Besnik.com 2021</p>
         </div>
     </footer>
+    <!-- Footer Section -->
+
+
+    <!-- ! script tag her zaman en alt satırda yer alsın-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts/app.js"></script>
+
 </body>
 </html>
