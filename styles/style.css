@@ -178,7 +178,6 @@ header p {
 }
 /* Featured Jobs Section */
 
-
 /* Jobs Section */
 .jobs-container{
     max-width: 1200px;
@@ -308,12 +307,7 @@ header p {
 }
 /* Jobs Section */
 
-
 /* Testimonial Section */
-body {
-    margin: 0;
-    padding: 0;
-}
 .swiper {
     width: 1050px;
     min-height: 450px;
@@ -441,7 +435,6 @@ body {
     }
 }
 /* Testimonial Section */
-
 
 /* NewsLetter-Component */
 .newslatter-main-div{
@@ -604,3 +597,93 @@ body {
     }
 }
 /* NewsLetter-Component */
+
+
+/*Footer*/
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px 20px;
+    border-top: 1px solid #e7e7e7;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 175px;
+    height: 100%;
+}
+.footer-section p {
+    margin-top: 10px; 
+    margin-bottom: 10px;
+}
+
+
+
+.footer-logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+.social-media {
+    margin-top: 20px; /* Bu satır sosyal medya ikonlarını aşağıya kaydırır */
+}
+
+
+
+.social-icons {
+    display: flex;
+    
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 15px; 
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    gap: 50px; 
+}
+/*Footer*/
