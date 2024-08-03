@@ -311,7 +311,7 @@ document.getElementById('searchButton').addEventListener('click', function () {
 
     const jobs = [
         { title: 'Software Engineer', location: 'New York', type: 'remotely' },
-        { title: 'UI/UX Designer', location: 'San Francisco', type: 'onsite' },
+        { title: 'UI/UX Designer', location: 'San Francisco', type: 'remotely' },
         { title: 'Product Manager', location: 'Denver', type: 'remotely' },
         { title: 'Product Manager', location: 'Clevland', type: 'remotely' },
         { title: 'Product Manager', location: 'Ohio', type: 'hybrid' },
@@ -320,20 +320,20 @@ document.getElementById('searchButton').addEventListener('click', function () {
         { title: 'Project Manager', location: 'Denver', type: 'onsite' },
         { title: 'Project Manager', location: 'Seattle', type: 'remotely' },
         { title: 'Marketing Manager', location: 'Los Angeles', type: 'remotely' },
+        { title: 'Backend Developer', location: 'Chicago', type: 'onsite' },
+        { title: 'DevOps Engineer', location: 'Austin', type: 'hybrid' },
         { title: 'Backend Developer', location: 'Chicago', type: 'remotely' },
-        { title: 'DevOps Engineer', location: 'Austin', type: 'remotely' },
-        { title: 'Backend Developer', location: 'Chicago', type: 'remotely' },
-        { title: 'Accountant', location: 'Boston', type: 'hybrid' },
+        { title: 'Accountant', location: 'New York', type: 'hybrid' },
         { title: 'Project Manager', location: 'Dallas', type: 'hybrid' },
         { title: 'UI/UX Designer', location: 'San Francisco', type: 'onsite' },
-        { title: 'Accountant', location: 'Boston', type: 'hybrid' },
+        { title: 'Accountant', location: 'Clevland', type: 'hybrid' },
         { title: 'DevOps Engineer', location: 'Austin', type: 'remotely' },
-        { title: 'Accountant', location: 'Boston', type: 'hybrid' },
+        { title: 'Accountant', location: 'Boston', type: 'onsite' },
         { title: 'Backend Developer', location: 'Boston', type: 'hybrid' },
         { title: 'Project Manager', location: 'Austin', type: 'remotely' },
         { title: 'Accountant', location: 'Boston', type: 'hybrid' },
-        { title: 'Product Manager', location: 'Remote', type: 'remotely' },
-        { title: 'DevOps Engineer', location: 'Austin', type: 'remotely' }
+        { title: 'Product Manager', location: 'New York', type: 'remotely' },
+        { title: 'DevOps Engineer', location: 'Denver', type: 'remotely' }
     ];
 
     const filteredJobs = jobs.filter(job =>

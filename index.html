@@ -26,58 +26,61 @@
 
 </head>
 <body>
-  <!-- Hero Section -->
-  <header class="header">
-    <div class="header-left">
-        <img src="images1/Logo.png" alt="Xiera Logo">
-    </div>
-    <div class="header-center">
-        <a href="#">Find Jobs <span class="dropdown-arrow">&#9662;</span></a>
-        <a href="#">Recent post <span class="dropdown-arrow">&#9662;</span></a>
-        <a href="#">Company</a>
-    </div>
-    <div class="header-right">
-        <button class="login-button">Log in</button>
-        <button class="create-account-button">Create Account</button>
-    </div>
+ <!-- Hero Section -->
+<header class="header">
+  <div class="header-left">
+      <img src="images1/Logo.png" alt="Xiera Logo">
+  </div>
+  <div class="header-center">
+      <a href="#">Find Jobs <span class="dropdown-arrow">&#9662;</span></a>
+      <a href="#">Recent post <span class="dropdown-arrow">&#9662;</span></a>
+      <a href="#">Company</a>
+  </div>
+  <div class="header-right">
+      <a href="#" class="login-link">Log in</a>
+      <button class="create-account-button">Create Account</button>
+  </div>
 </header>
 
 <main>
-    <section class="hero">
-        <h1>The home of your dream j <img class="doodle-4" src="images1/doodle-4 1.png" alt="doodle-4">b</h1>
-        <p class="centered-text">You do not have the right to remain silent... let us know what it takes to challenge you</p>
-        <div class="search-bar">
-            <input type="text" id="jobTitle" placeholder="Job Title or keyword">
-            <input type="text" id="location" placeholder="Location">
-            <select id="jobType">
-                <option value="remotely">Remotely</option>
-                <option value="onsite">Onsite</option>
-                <option value="hybrid">Hybrid</option>
-                
-
-
-            </select>
-            <button id="searchButton" class="search-button">Search job</button>
-        </div>
-        <div class="trending-searches">
-            <span>Trending searches:</span>
-            <a href="#">Remote job</a>
-            <a href="#">UI/UX Design</a>
-            <a href="#">Product Design</a>
-            <a href="#">Development</a>
-            <a href="#">Work From Home</a>
-        </div>
-    </section>
-    <!-- Modal Structure -->
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Search Results</h2>
-    <div id="results"></div>
+  <section class="hero">
+      <h1>The home of your dream j <img class="doodle-4" src="images1/doodle-4 1.png" alt="doodle-4">b</h1>
+      <p class="centered-text">You do not have the right to remain silent... let us know what it takes to challenge you</p>
+      <div class="search-bar">
+          <div class="search-input-container">
+              <span class="search-icon">&#128269;</span> 
+              <input type="text" id="jobTitle" placeholder="Job Title or keyword">
+          </div>
+          <div class="search-input-container">
+              <span class="location-icon">&#127968;</span> 
+              <input type="text" id="location" placeholder="Location">
+          </div>
+          <select id="jobType">
+              <option value="remotely">Remotely</option>
+              <option value="onsite">Onsite</option>
+              <option value="hybrid">Hybrid</option>
+          </select>
+          <button id="searchButton" class="search-button">Search job</button>
+      </div>
+      <div class="trending-searches">
+          <span>Trending searches:</span>
+          <a href="#">Remote job</a>
+          <a href="#">UI/UX Design</a>
+          <a href="#">Product Design</a>
+          <a href="#">Development</a>
+          <a href="#">Work From Home</a>
+      </div>
+  </section>
+  <!-- Modal Structure -->
+  <div id="myModal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Search Results</h2>
+          <div id="results"></div>
+      </div>
   </div>
-</div>
-
 </main>
+
 
 
 
