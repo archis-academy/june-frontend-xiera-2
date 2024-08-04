@@ -363,18 +363,24 @@ document.getElementById('searchButton').addEventListener('click', function () {
 
     // Show the modal
     modal.style.display = "block";
+    modal.querySelector('.modal-content').style.transform = "scale(1.05)";
+    setTimeout(() => {
+        modal.querySelector('.modal-content').style.transform = "scale(1)";
+    }, 200);
 });
 
 // Close the modal
 document.querySelector('.close').addEventListener('click', function () {
-    document.getElementById("myModal").style.display = "none";
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none";
+    modal.querySelector('.modal-content').style.transform = "scale(0.95)";
 });
-
 // Close the modal when clicking outside of it
 window.addEventListener('click', function (event) {
     const modal = document.getElementById("myModal");
     if (event.target === modal) {
         modal.style.display = "none";
+        modal.querySelector('.modal-content').style.transform = "scale(0.95)";
     }
 });
 
