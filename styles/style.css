@@ -447,6 +447,10 @@ header p {
     margin: 0 auto;
     padding: 20px 40px;  
 }
+
+.sales-button:hover {
+    background: #e64a19;
+}
   
 .pricing-value-div {
     max-width: 300px;

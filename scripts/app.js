@@ -314,50 +314,58 @@ function renderPricingEvaluation(data) {
   }).join('');
 }
 
-
 document.addEventListener("DOMContentLoaded", function() {
   const monthlyBtn = document.getElementById("monthly-btn");
   const yearlyBtn = document.getElementById("yearly-btn");
 
   function activateButtonPricing(button) {
-    document.querySelectorAll(".pricing-monthly-btn, .pricing-yearly-btn").forEach(btn => {
+    document
+    .querySelectorAll(".pricing-monthly-btn, .pricing-yearly-btn")
+    .forEach(btn => {
       btn.classList.remove("active");
     });
     button.classList.add("active");
   }
 
+  function refreshSwiper() {
+    if(pricingSwiper) {
+      pricingSwiper.destroy(true, true);
+    }
+    initializeSwiper();
+  }
+
   monthlyBtn.addEventListener("click", function() {
     renderPricingEvaluation(pricingEvaluation.monthly);
     activateButtonPricing(monthlyBtn);
+    refreshSwiper();
   });
 
   yearlyBtn.addEventListener("click", function() {
     renderPricingEvaluation(pricingEvaluation.yearly);
     activateButtonPricing(yearlyBtn);
+    refreshSwiper();
   });
 
   // Varsayılan button
   renderPricingEvaluation(pricingEvaluation.monthly);
   activateButtonPricing(monthlyBtn);
+  refreshSwiper();
 });
+let pricingSwiper;
 
-
-// Initialize Swiper for Pricing
-document.addEventListener('DOMContentLoaded', function () {
-    // Initialize Swiper
-    var pricingSwiper = new Swiper(".pricing-swiper", {
-      effect: "cards",
-      grabCursor: true,
-      cardsEffect: {
-        slideShadows: true,
-        perSlideOffset: 5,
-        perSlideRotate: 5,
-      },
-    });
+const initializeSwiper = () => {
+  pricingSwiper = new Swiper(".pricing-swiper", {
+    effect: "cards",
+    grabCursor: true,
+    cardsEffect: {
+      slideShadows: true,
+      perSlideOffset: 5,
+      perSlideRotate: 5,
+    },
+  });
   
-    pricingSwiper.update();
-});
-
+  pricingSwiper.update();
+};
 /* Pricing Section */
 
 
