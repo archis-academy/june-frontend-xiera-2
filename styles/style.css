@@ -322,13 +322,14 @@ header p {
     margin: auto;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 15px;
 }
   
 .pricing-package-div {
     display: flex;
     justify-content: center;  
     width: 700px;
+    gap: 40px;
 }
   
 .pricing-happy-users {
@@ -523,7 +524,46 @@ header p {
     position: relative;
     bottom: -10px;
 }
- /* Pricing Section */
+
+@media (max-width: 1030px) {
+    .pricing-container-div{
+      flex-direction: column;
+      align-items: center;
+      margin: 50px auto;
+    }
+  
+    .pricing-package-div{
+      max-width: 500px;    
+    }
+  
+    .pricing-swiper{
+      max-width: 260px;
+      min-height: 500px;
+    }
+  
+    .pricing-value-div{
+      margin-top: 30px;
+      max-width: 500px;
+    }
+}
+
+@media (max-width: 870px) {
+    .pricing-container-div{
+      flex-direction: column;
+      align-items: center;
+      margin: 50px auto;
+    }
+  
+    .pricing-package-div{
+      max-width: 300px;    
+    }
+
+    .pricing-value-div{
+      margin-top: 10px;
+      max-width: 300px;
+    }
+}
+/* Pricing Section */
 
 
 /* Testimonial Section */
