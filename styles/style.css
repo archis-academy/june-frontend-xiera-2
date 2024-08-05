@@ -309,12 +309,230 @@ header p {
 /* Jobs Section */
 
 
+/* Pricing Section */
+.pricing-main-div {
+    padding: 60px 20px;
+    display: flex;            
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.pricing-container-div{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+  
+.pricing-package-div {
+    display: flex;
+    justify-content: center;  
+    width: 700px;
+}
+  
+.pricing-happy-users {
+    display: flex;
+    width: 145px;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 250px;
+}
+  
+.hu-count {
+    display: flex;
+    align-items: center;
+}
+  
+.hu-k {
+    margin: 0;
+}
+  
+.hu-emoji {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    z-index: 2;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer; 
+}
+  
+.hu-emoji:hover {
+    max-width: 100px;
+}
+  
+.pricing-swiper {
+    max-width: 360px;
+    height: 500px;
+    top: 20px;
+}
+  
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: #fff;
+}
+  
+.pricing-evaluations {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 40px auto;
+}
+  
+.pricing-evaluations-title{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+  
+.pricing-grade {
+    font-family: "Inter",sans-serif;
+    font-size: clamp(10px, 5vw, 20px);
+    font-weight: 600;
+    line-height: clamp(20px, 5vw, 24px);
+}
+  
+.pricing-package-type {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(10px, 5vw, 18px);
+    font-weight: 400;
+    line-height: clamp(10px, 5vw, 20px);
+    letter-spacing: -0.4px;
+    color: #5B5A62;
+}
+  
+.pricing-price{
+    font-family: "Inter",sans-serif;
+    line-height: clamp(30px, 7vw, 50px);
+    font-weight: 700;
+    line-height: clamp(30px, 7vw, 50px);
+    letter-spacing: -1px;
+    color: #292929;
+}
+  
+.pricing-description {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    font-family: "Inter", sans-serif;
+    font-size: clamp(10px, 5vw, 18px);
+    font-weight: 400;
+    line-height: clamp(10px, 5vw, 20px);
+    letter-spacing: -0.4px;
+    color: #5B5A62;
+}
+  
+.pricing-description li {
+    margin: 10px 0;
+}
+  
+.sales-button {
+    background-color: #ff5900;
+    color: white;
+    font-size: clamp(10px, 5vw, 16px);
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    font-family: "Inter",sans-serif;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 20px 40px;  
+}
+  
+.pricing-value-div {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    margin-top: 150px;
+    z-index: 1;
+}
+  
+.price-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+  
+.price-title {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(10px, 3vw, 16px);
+    font-weight: 600;
+    line-height: clamp(20px, 3vw, 24px);
+    letter-spacing: 0.17em;
+    text-align: left;
+    color: #FFB200;  
+}
+  
+.price-subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(25px, 7vw, 50px);
+    font-weight: 700;
+    line-height: clamp(30px, 7vw, 50px);
+    letter-spacing: -1px;
+    text-align: left;
+    color: #292929;
+}
+  
+.price-paragraph {
+    font-family: Inter;
+    font-size: clamp(10px, 5vw, 18px);
+    font-weight: 400;
+    line-height: clamp(10px, 5vw, 30px);
+    letter-spacing: -0.4px;
+    text-align: left;
+    color: #5B5A62;
+}
+  
+.pricing-my-button {
+    display: flex;
+    justify-content: space-evenly;
+}
+  
+.pricing-monthly-btn, .pricing-yearly-btn { 
+    border-color: transparent;
+    background-color: transparent;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(10px, 5vw, 20px);
+    font-weight: 600;
+    line-height: clamp(10px, 5vw, 18px);
+    color: #292E37;
+    cursor: pointer;
+    position: relative;
+}
+  
+.pricing-monthly-btn.active, .pricing-yearly-btn.active {
+    color: #864BD8;
+}
+  
+.pricing-monthly-btn.active::after, .pricing-yearly-btn.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid #864BD8;
+    position: relative;
+    bottom: -10px;
+}
+ /* Pricing Section */
+
+
 /* Testimonial Section */
 body {
     margin: 0;
     padding: 0;
 }
-.swiper {
+
+.testimonial-swiper{
     width: 1050px;
     min-height: 450px;
 }

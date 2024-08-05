@@ -218,6 +218,149 @@ jobsContainer.innerHTML = jobs.map(item => {
 /* Jobs Section */
 
 
+/* Pricing Section */
+
+// Happy users kisminda arttirma islemi yapar
+const incrementButton = document.getElementById("hu-counter");
+let ilksayi = 0;
+
+function increment() {
+  ilksayi += 1;
+  console.log("sayı arttır");
+  incrementButton.innerHTML = 398 + ilksayi;
+}
+
+// Pricing data
+const pricingEvaluation = {
+  monthly: [
+    {
+      pricingGrade: "BEGINNER",
+      pricingPackageType: "Monthly Package",
+      pricingPrice: "17.99"
+    },
+    {
+      pricingGrade: "INTERMEDIATE",
+      pricingPackageType: "Monthly Package",
+      pricingPrice: "25.99"
+    },
+    {    
+      pricingGrade: "ADVANCED",
+      pricingPackageType: "Monthly Package",
+      pricingPrice: "34.99"
+    },
+    {
+      pricingGrade: "PRO",
+      pricingPackageType: "Monthly Package",
+      pricingPrice: "45.99"
+    },
+    {
+      pricingGrade: "ELITE",
+      pricingPackageType: "Monthly Package",
+      pricingPrice: "59.99"
+    }
+  ],
+
+  yearly: [
+    {
+      pricingGrade: "BEGINNER",
+      pricingPackageType: "Yearly Package",
+      pricingPrice: "179.99"
+    },
+    {
+      pricingGrade: "INTERMEDIATE",
+      pricingPackageType: "Yearly Package",
+      pricingPrice: "259.99"
+    },
+    {
+      pricingGrade: "ADVANCED",
+      pricingPackageType: "Yearly Package",
+      pricingPrice: "359.99"
+    },
+    {
+      pricingGrade: "PRO",
+      pricingPackageType: "Yearly Package",
+      pricingPrice: "459.99"
+    },
+    {
+      pricingGrade: "ELITE",
+      pricingPackageType: "Yearly Package",
+      pricingPrice: "599.99"
+    }
+  ]  
+};
+
+const pricingEvaluationContainer = document.getElementById('pricing-evaluations-container');
+
+function renderPricingEvaluation(data) {
+  pricingEvaluationContainer.innerHTML = data.map(item => {
+    return `
+      <div class="swiper-slide">
+        <div class="pricing-evaluations">
+          <div class="pricing-evaluations-title">
+            <h2 class="pricing-grade">${item.pricingGrade}</h2>
+            <p class="pricing-package-type">${item.pricingPackageType}</p>
+          </div>
+          <h1 class="pricing-price">$${item.pricingPrice}</h1>
+          <ul class="pricing-description">
+            <li>Anonymous User</li>
+            <li>Bot Detection</li>
+            <li>Registration</li>
+            <li>Directory</li>
+          </ul>
+          <button class="sales-button">Get Started Now</button>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const monthlyBtn = document.getElementById("monthly-btn");
+  const yearlyBtn = document.getElementById("yearly-btn");
+
+  function activateButtonPricing(button) {
+    document.querySelectorAll(".pricing-monthly-btn, .pricing-yearly-btn").forEach(btn => {
+      btn.classList.remove("active");
+    });
+    button.classList.add("active");
+  }
+
+  monthlyBtn.addEventListener("click", function() {
+    renderPricingEvaluation(pricingEvaluation.monthly);
+    activateButtonPricing(monthlyBtn);
+  });
+
+  yearlyBtn.addEventListener("click", function() {
+    renderPricingEvaluation(pricingEvaluation.yearly);
+    activateButtonPricing(yearlyBtn);
+  });
+
+  // Varsayılan button
+  renderPricingEvaluation(pricingEvaluation.monthly);
+  activateButtonPricing(monthlyBtn);
+});
+
+
+// Initialize Swiper for Pricing
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize Swiper
+    var pricingSwiper = new Swiper(".pricing-swiper", {
+      effect: "cards",
+      grabCursor: true,
+      cardsEffect: {
+        slideShadows: true,
+        perSlideOffset: 5,
+        perSlideRotate: 5,
+      },
+    });
+  
+    pricingSwiper.update();
+});
+
+/* Pricing Section */
+
+
 /* Testimonial Section */
 document.getElementById("testimonials-header").innerHTML = `TESTIMONIALS`
 document.getElementById("testimonial-subtitle").innerHTML = `What our customer say`
@@ -294,7 +437,7 @@ testimonialsEvaluationContainer.innerHTML = testimonialsEvaluation.map(item => {
   }).join('');
 
 
-  var swiper = new Swiper(".mySwiper", {
+  var testimonialSwiper = new Swiper(".testimonial-swiper", {
     spaceBetween: 30,
     pagination: {
       el: ".swiper-pagination",
