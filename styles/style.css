@@ -39,7 +39,7 @@ body{
     justify-content: space-between;
     max-width: 300px;
     min-height: 150px;
-    padding: 20px;
+    padding: 40px;
     align-items: center;
     text-align: center;
     margin: 20px 0 10px 0;
@@ -47,8 +47,8 @@ body{
 }
 
 .step img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 20px;
 }
 
@@ -61,6 +61,7 @@ body{
     font-size: 14px;
     color: #777;
 }
+
 
 
 
