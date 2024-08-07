@@ -349,6 +349,11 @@ header p {
 .hu-k {
     margin: 0;
 }
+
+.hu-title{
+    font-family: "Inter", sans-serif ;
+    font-size: 15px;
+}
   
 .hu-emoji {
     display: flex;
