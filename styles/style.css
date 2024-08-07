@@ -9,9 +9,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f5f5f7;
-    color: #333;
-    margin: 0;
-    padding: 0;
+    color: #333;    
 }
 
 .container {
@@ -870,11 +868,9 @@ header p {
     }
 }
 /* NewsLetter-Component */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
+
+/* Footer Section */
 body {
     font-family: Arial, sans-serif;
 }
@@ -960,3 +956,4 @@ footer {
     padding-top: 80px;
     gap: 50px; 
 }
+/* Footer Section */
