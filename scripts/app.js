@@ -384,4 +384,27 @@ window.addEventListener('click', function (event) {
     }
 });
 
+// Modal açıldığında body overflow'u hidden yap
+const modal = document.getElementById('myModal');
+const closeButton = document.querySelector('.close');
+const searchButton = document.getElementById('searchButton');
+
+searchButton.addEventListener('click', () => {
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+});
+
+closeButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+});
+
+
 

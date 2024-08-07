@@ -65,6 +65,40 @@ body {
 .hero {
     text-align: center;
     padding: 50px 20px;
+    position: relative;
+}
+
+.hero-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-images .image-wrapper {
+    position: relative;
+}
+
+.hero-images img {
+    width: 200px; /* Adjust as needed */
+}
+
+.hero-images .small-left-image {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    left: 50px; /* Adjust as needed */
+    width: 50px; /* Adjust as needed */
+    margin-left: 80%;
+   
+}
+
+.hero-images .small-right-image {
+    position: absolute;
+    bottom: -37px; /* Adjust as needed */
+    right: 100%; /* Adjust as needed */
+    width: 50px; /* Adjust as needed */
+    height: 50px;
+    margin-right: 80%;
+    
 }
 
 .hero h1 {
@@ -90,18 +124,19 @@ body {
 }
 
 .search-input-container {
+    
     position: relative;
 }
 
 .search-input-container input {
-    padding-left: 35px;
+    padding-left: 35px; /* Adjust this value to ensure enough space for the icon */
 }
 
 .search-icon, .location-icon {
-    position: absolute;
+    
     left: 10px;
     top: 50%;
-    transform: translateY(-50%);
+   
     font-size: 18px;
     color: #666;
 }
@@ -109,7 +144,8 @@ body {
 .search-bar input, .search-bar select, .search-bar button {
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ddd;
+    border: none;
+    outline: none;
     border-radius: 5px;
 }
 
@@ -151,8 +187,6 @@ body {
     background-color: #574b90;
 }
 
-
-
 /* Modal styles */
 .modal {
     display: none;
@@ -180,7 +214,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-
 .close {
     color: #aaa;
     float: right;
@@ -192,22 +225,6 @@ body {
 .close:focus {
     color: black;
     text-decoration: none;
-    cursor: pointer;
-}
-.modal-content h2 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-#results div {
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
-    transition: background-color 0.3s;
-}
-
-#results div:hover {
-    background-color: #f0f0f0;
     cursor: pointer;
 }
 
