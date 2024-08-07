@@ -420,36 +420,37 @@ const testimonialsEvaluation = [
 const testimonialsEvaluationContainer = document.getElementById('testimonials-evaluations-container');
 
 testimonialsEvaluationContainer.innerHTML = testimonialsEvaluation.map(item => {
-    return `
-      <div class="swiper-slide">
-        <div class="testimonials-evaluation">
-          <div class="testimonials-image-div">
-            <img class="testimonials-users-image" src="${item.testimonialsUserProfile}" alt="users">
-          </div>
-          <div class="testimonials-user-description">
-            <h1 class="testimonials-userName">${item.testimonialsName}</h1>
-            <h3 class="testimonials-department">${item.testimonialsSubtitle}</h3>
-            <p class="testimonials-text">${item.testimonialsDescription}</p>
-            <div class="testimonials-signature">
-              <div class="testimonials-evaluation-stars">
-                <img src="${item.testimonialsStar}" alt="stars" class="signature-img">
-              </div>
-              <div class="testimonials-evaluation-designer">
-                <img src="${item.testimonialsDesigner}" alt="designer" class="signature-img">
-              </div> 
-            </div>         
-          </div>
+  return `
+    <div class="swiper-slide">
+      <div class="testimonials-evaluation">
+        <div class="testimonials-image-div">
+          <img class="testimonials-users-image" src="${item.testimonialsUserProfile}" alt="users">
+        </div>
+        <div class="testimonials-user-description">
+          <h1 class="testimonials-userName">${item.testimonialsName}</h1>
+          <h3 class="testimonials-department">${item.testimonialsSubtitle}</h3>
+          <p class="testimonials-text">${item.testimonialsDescription}</p>
+          <div class="testimonials-signature">
+            <div class="testimonials-evaluation-stars">
+              <img src="${item.testimonialsStar}" alt="stars" class="signature-img">
+            </div>
+            <div class="testimonials-evaluation-designer">
+              <img src="${item.testimonialsDesigner}" alt="designer" class="signature-img">
+            </div> 
+          </div>         
         </div>
       </div>
-    `;
-  }).join('');
+    </div>
+  `;
+}).join('');
 
 
-  var testimonialSwiper = new Swiper(".testimonial-swiper", {
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
+const testimonialSwiper = new Swiper(".testimonial-swiper", {
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
+
 /* Testimonial Section */

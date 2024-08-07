@@ -372,7 +372,7 @@ header p {
     top: 20px;
 }
   
-.swiper-slide {
+.pricing-swiper .swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -582,6 +582,7 @@ header p {
     width: 1050px;
     min-height: 450px;
 }
+
 
 .testimonial-main-div{
     padding: 0 20px;
