@@ -13,7 +13,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 50px;
+    padding: 15px 50px;
+    flex-wrap: wrap;
 }
 
 .header-left img {
@@ -79,23 +80,25 @@ body {
 }
 
 .hero-images img {
-    width: 200px; /* Adjust as needed */
+    width: 200px; 
+}
+.hero-images .left-image {
+    width: 200px;
+    margin-bottom: -175px;
 }
 
 .hero-images .small-left-image {
+    width: 50px;
     position: absolute;
-    top: 20px; /* Adjust as needed */
-    left: 50px; /* Adjust as needed */
-    width: 50px; /* Adjust as needed */
-    margin-left: 80%;
-   
+    top: 0;
+    left: 0;
+    transform: translate(100px, -50px); 
 }
 
 .hero-images .small-right-image {
-    position: absolute;
-    bottom: -37px; /* Adjust as needed */
-    right: 100%; /* Adjust as needed */
-    width: 50px; /* Adjust as needed */
+    
+    
+    width: 50px; 
     height: 50px;
     margin-right: 80%;
     
@@ -114,6 +117,7 @@ body {
     width: 100%;
     max-width: 500px;
     margin: 0 auto 30px auto;
+    flex-wrap: wrap;
 }   
 
 .search-bar {
@@ -129,7 +133,7 @@ body {
 }
 
 .search-input-container input {
-    padding-left: 35px; /* Adjust this value to ensure enough space for the icon */
+    padding-left: 35px; 
 }
 
 .search-icon, .location-icon {
@@ -228,6 +232,99 @@ body {
     cursor: pointer;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px; 
+    }
+
+    .header-center {
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .header-right {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .hero h1 {
+        font-size: 36px; 
+        width: 100%;
+    }
+
+    .hero-images img {
+        width: 150px; 
+    }
+
+    .hero-images .left-image {
+        width: 150px;
+        transform: translate(75px, -50px);
+    }
+
+    .hero-images .small-left-image {
+        width: 40px;
+        transform: translate(75px, -20px);
+    }
+
+    .hero-images .small-right-image {
+        width: 40px;
+        height: 40px;
+        margin-right: 60%;
+    }
+
+    .search-bar {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .trending-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-content {
+        width: 90%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .header-center {
+        width: 100%; 
+    }
+
+    .header-right {
+        width: 100%; 
+        justify-content: flex-end; 
+    }
+
+    .hero h1 {
+        font-size: 24px; 
+    }
+
+    .hero-images img {
+        width: 100px; 
+    }
+    .hero-images .left-image {
+        width: 100%;
+        height: auto;
+        
+
+    }
+
+    .search-bar {
+        width: 100%; 
+    }
+
+    .search-bar input, .search-bar select, .search-bar button {
+        width: 100%; 
+    }
+}
 /* Featured Jobs Section */
 body {
     font-family: 'Arial', sans-serif;

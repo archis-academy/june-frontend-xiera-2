@@ -384,7 +384,7 @@ window.addEventListener('click', function (event) {
     }
 });
 
-// Modal açıldığında body overflow'u hidden yap
+
 const modal = document.getElementById('myModal');
 const closeButton = document.querySelector('.close');
 const searchButton = document.getElementById('searchButton');
