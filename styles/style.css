@@ -1,4 +1,330 @@
+/* Hero Section */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.letter-o {
+    color: red;
+    font-weight: bold; 
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    flex-wrap: wrap;
+}
 
+.header-left img {
+    height: 40px;
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}   
+
+.header-center a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+}
+
+.dropdown-arrow {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-button, .create-account-button {
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 17px 20px;
+    cursor: pointer;
+}
+
+.create-account-button {
+    background-color: #6c63ff;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.hero-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-images .image-wrapper {
+    position: relative;
+}
+
+.hero-images img {
+    width: 200px; 
+}
+.hero-images .left-image {
+    width: 200px;
+    margin-bottom: -175px;
+}
+
+.hero-images .small-left-image {
+    width: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(100px, -50px); 
+}
+
+.hero-images .small-right-image {
+    
+    
+    width: 50px; 
+    height: 50px;
+    margin-right: 80%;
+    
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0 auto 30px auto;
+    width: 500px;
+}
+
+.hero p.centered-text {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+    flex-wrap: wrap;
+}   
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-input-container {
+    
+    position: relative;
+}
+
+.search-input-container input {
+    padding-left: 35px; 
+}
+
+.search-icon, .location-icon {
+    
+    left: 10px;
+    top: 50%;
+   
+    font-size: 18px;
+    color: #666;
+}
+
+.search-bar input, .search-bar select, .search-bar button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    background-color: #ff7043;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+.trending-searches {
+    text-align: center;
+    margin: 20px 0;
+    padding-top: 50px;
+    color: #000;
+    font-size: 20px;
+}
+
+.trending-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.trending-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #292929;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.trending-button:hover {
+    background-color: #574b90;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-height: 70vh; /* Modal'ın yüksekliği */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* Dikey kaydırma */
+    transition: transform 0.3s ease;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px; 
+    }
+
+    .header-center {
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .header-right {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .hero h1 {
+        font-size: 36px; 
+        width: 100%;
+    }
+
+    .hero-images img {
+        width: 150px; 
+    }
+
+    .hero-images .left-image {
+        width: 150px;
+        transform: translate(75px, -50px);
+    }
+
+    .hero-images .small-left-image {
+        width: 40px;
+        transform: translate(75px, -20px);
+    }
+
+    .hero-images .small-right-image {
+        width: 40px;
+        height: 40px;
+        margin-right: 60%;
+    }
+
+    .search-bar {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .trending-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-content {
+        width: 90%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .header-center {
+        width: 100%; 
+    }
+
+    .header-right {
+        width: 100%; 
+        justify-content: flex-end; 
+    }
+
+    .hero h1 {
+        font-size: 24px; 
+    }
+
+    .hero-images img {
+        width: 100px; 
+    }
+    .hero-images .left-image {
+        width: 100%;
+        height: auto;
+        
+
+    }
+
+    .search-bar {
+        width: 100%; 
+    }
+
+    .search-bar input, .search-bar select, .search-bar button {
+        width: 100%; 
+    }
+}
 /* Onboarding  Section */
 body{
     font-family: 'Arial', sans-serif;
@@ -61,9 +387,6 @@ body{
     font-size: 14px;
     color: #777;
 }
-
-
-
 
 /* Featured Jobs Section */
 body {

@@ -302,3 +302,109 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 /* Testimonial Section */
+
+/*Hero Section*/
+document.getElementById('searchButton').addEventListener('click', function () {
+    const jobTitle = document.getElementById('jobTitle').value;
+    const location = document.getElementById('location').value;
+    const jobType = document.getElementById('jobType').value;
+
+    const jobs = [
+        { title: 'Software Engineer', location: 'New York', type: 'remotely' },
+        { title: 'UI/UX Designer', location: 'San Francisco', type: 'remotely' },
+        { title: 'Product Manager', location: 'Denver', type: 'remotely' },
+        { title: 'Product Manager', location: 'Clevland', type: 'remotely' },
+        { title: 'Product Manager', location: 'Ohio', type: 'hybrid' },
+        { title: 'Marketing Manager', location: 'Los Angeles', type: 'remotely' },
+        { title: 'Project Manager', location: 'Chicago', type: 'onsite' },
+        { title: 'Project Manager', location: 'Denver', type: 'onsite' },
+        { title: 'Project Manager', location: 'Seattle', type: 'remotely' },
+        { title: 'Marketing Manager', location: 'Los Angeles', type: 'remotely' },
+        { title: 'Backend Developer', location: 'Chicago', type: 'onsite' },
+        { title: 'DevOps Engineer', location: 'Austin', type: 'hybrid' },
+        { title: 'Backend Developer', location: 'Chicago', type: 'remotely' },
+        { title: 'Accountant', location: 'New York', type: 'hybrid' },
+        { title: 'Project Manager', location: 'Dallas', type: 'hybrid' },
+        { title: 'UI/UX Designer', location: 'San Francisco', type: 'onsite' },
+        { title: 'Accountant', location: 'Clevland', type: 'hybrid' },
+        { title: 'DevOps Engineer', location: 'Austin', type: 'remotely' },
+        { title: 'Accountant', location: 'Boston', type: 'onsite' },
+        { title: 'Backend Developer', location: 'Boston', type: 'hybrid' },
+        { title: 'Project Manager', location: 'Austin', type: 'remotely' },
+        { title: 'Accountant', location: 'Boston', type: 'hybrid' },
+        { title: 'Product Manager', location: 'New York', type: 'remotely' },
+        { title: 'DevOps Engineer', location: 'Denver', type: 'remotely' }
+    ];
+
+    const filteredJobs = jobs.filter(job =>
+        job.title.toLowerCase().includes(jobTitle.toLowerCase()) &&
+        job.location.toLowerCase().includes(location.toLowerCase()) &&
+        job.type === jobType
+    );
+
+    const modal = document.getElementById("myModal");
+    const resultsContainer = document.getElementById("results");
+
+    // Clear previous results
+    resultsContainer.innerHTML = '';
+
+    // Populate results
+    if (filteredJobs.length > 0) {
+        filteredJobs.forEach(job => {
+            const jobElement = document.createElement('div');
+            jobElement.innerHTML = `<strong>Title:</strong> ${job.title} <br> <strong>Location:</strong> ${job.location} <br> <strong>Type:</strong> ${job.type}`;
+            jobElement.style.borderBottom = '1px solid #ddd';
+            jobElement.style.padding = '10px 0';
+            resultsContainer.appendChild(jobElement);
+        });
+    } else {
+        resultsContainer.innerHTML = '<p>No jobs found.</p>';
+    }
+
+    // Show the modal
+    modal.style.display = "block";
+    modal.querySelector('.modal-content').style.transform = "scale(1.05)";
+    setTimeout(() => {
+        modal.querySelector('.modal-content').style.transform = "scale(1)";
+    }, 200);
+});
+
+// Close the modal
+document.querySelector('.close').addEventListener('click', function () {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none";
+    modal.querySelector('.modal-content').style.transform = "scale(0.95)";
+});
+// Close the modal when clicking outside of it
+window.addEventListener('click', function (event) {
+    const modal = document.getElementById("myModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+        modal.querySelector('.modal-content').style.transform = "scale(0.95)";
+    }
+});
+
+
+const modal = document.getElementById('myModal');
+const closeButton = document.querySelector('.close');
+const searchButton = document.getElementById('searchButton');
+
+searchButton.addEventListener('click', () => {
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+});
+
+closeButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+});
+
+
+
