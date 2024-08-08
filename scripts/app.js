@@ -555,6 +555,3 @@ window.addEventListener('click', (event) => {
       document.body.style.overflow = 'auto';
   }
 });
-
-
-
