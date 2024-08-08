@@ -576,6 +576,10 @@ header p {
       flex-direction: column;
       align-items: center;
     }
+
+    .pricing-happy-users {
+        margin: 0px;
+    }
 }
 /* Pricing Section */
 
